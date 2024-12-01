@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffccf9, #ccf0ff);
+            margin: 0;
+            position: relative;
+        }
+
+        .calculator {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #7b68ee;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: right;
+            background-color: #f9f9f9;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .buttons button {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Blue color for number buttons */
+        .buttons button.number {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .buttons button.number:hover {
+            background-color: #0056b3;
+        }
+
+        /* Orange color for operator buttons */
+        .buttons button.operator {
+            background-color: #ff9800;
+            color: #fff;
+        }
+
+        .buttons button.operator:hover {
+            background-color: #e68a00;
+        }
+
+        /* Special buttons like equal and clear */
+        .buttons .clear {
+            grid-column: span 2;
+            background-color: #f44336;
+        }
+
+        .buttons .equal {
+            grid-column: span 2;
+            background-color: #4caf50;
+        }
+
+        /* Highlighted vertical footer text */
+        .footer-text {
+            position: absolute;
+            right: 0;
+            top: 20%;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff4500;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CALCULATOR</h1>
+
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+
+        <div class="buttons">
+            <button class="operator" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="deleteChar()">DEL</button>
+            <button class="operator" onclick="appendOperator('^')">^</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+
+            <button class="number" onclick="appendNumber('0')">0</button>
+            <button class="operator" onclick="appendOperator('.')">.</button>
+            <button class="operator" onclick="sqrt()">√</button>
+            <button class="operator" onclick="cbrt()">∛</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button class="operator" onclick="square()">x²</button>
+            <button class="operator" onclick="percentage()">%</button>
+        </div>
+    </div>
+
+    <div class="footer-text">Designed by Yarramsetti Rupa Sri</div>
+
+    <script>
+        const display = document.getElementById('display');
+        let expression = '';
+
+        // Function to append numbers and operators to the display
+        function appendNumber(number) {
+            expression += number;
+            display.value = expression;
+        }
+
+        function appendOperator(operator) {
+            expression += ` ${operator} `;
+            display.value = expression;
+        }
+
+        // Function to clear the display
+        function clearDisplay() {
+            expression = '';
+            display.value = '';
+        }
+
+        // Function to delete the last character
+        function deleteChar() {
+            expression = expression.trim().slice(0, -1);
+            display.value = expression;
+        }
+
+        // Square root function
+        function sqrt() {
+            try {
+                expression = Math.sqrt(eval(expression)).toString();
+                display.value = expression;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        // Cube root function
+        function cbrt() {
+            try {
+                expression = Math.cbrt(eval(expression)).toString();
+                display.value = expression;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        // Square function (x²)
+        function square() {
+            try {
+                expression = Math.pow(eval(expression), 2).toString();
+                display.value = expression;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        // Percentage function
+        function percentage() {
+            try {
+                expression = (eval(expression) / 100).toString();
+                display.value = expression;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+
+        // Function to calculate the final result
+        function calculate() {
+            try {
+                expression = expression.replace('^', '**');
+                expression = eval(expression).toString();
+                display.value = expression;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+
+</body>
+</html>
