@@ -712,34 +712,4 @@ img {
         opacity: 1;
     }
 }
-/* Default light mode styles */
-body {
-    background-color: #ffffff; /* Light background */
-    color: #000000; /* Dark text */
-}
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212; /* Dark background */
-        color: #ffffff; /* Light text */
-    }
-
-    h1, h2, h3, h4, h5, h6, p, a {
-        color: #ffffff; /* Ensure text and links are visible */
-    }
-
-    .certifications li {
-        background-color: #333333; /* Dark background for containers */
-        color: #ffffff; /* Light text for containers */
-    }
-
-    .cta-btn {
-        background-color: #444444; /* Dark button background */
-        color: #ffffff; /* Light button text */
-    }
-
-    .cta-btn:hover {
-        background-color: #555555; /* Slightly lighter on hover */
-    }
-}
