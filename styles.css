@@ -590,3 +590,125 @@ img {
     display: block;
   }
 }
+.certifications ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-top: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+} 
+.certifications li { 
+    background-color: #d6a7f7; 
+    /* Light Purple Background */ 
+    color: #3c2b59; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 12px; 
+    /* Rounded corners */
+     padding: 15px 20px; 
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+     transition: all 0.3s ease-in-out; 
+     position: relative; 
+} 
+.certifications li:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    background-color: #a76af7; 
+    /* Darker Purple on Hover */
+ } 
+ .certifications .cta-btn { 
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 8px 15px; 
+    background-color: #5a0b9a; 
+    color: #fff; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 14px; 
+    position: absolute; 
+    right: 20px; 
+    bottom: 15px; 
+    transition: background-color 0.3s ease; 
+} 
+.certifications .cta-btn:hover { 
+    background-color: #3c2b59;
+} 
+.certifications li::before {  
+    font-size: 30px; 
+    position: absolute; 
+    left: -15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #a12fff; 
+} .certifications {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four containers in one row */
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center; /* Center-align the grid items */
+    padding: 20px;
+}
+
+.certification-item {
+    background-color: #d6a7f7; /* Light Purple Background */
+    color: #3c2b59; /* Dark Text */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* For animations to stay within bounds */
+}
+
+.certification-item:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #a76af7; /* Darker Purple on Hover */
+}
+
+.certification-item h4 {
+    margin-bottom: 15px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5a0b9a; /* Button Background */
+    color: #fff; /* Button Text */
+    border-radius: 8px; /* Rounded button */
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #3c2b59; /* Darker button color on hover */
+}
+
+.certification-item::before {
+    content: "🎓"; /* Icon */
+    font-size: 40px;
+    position: absolute;
+    top: -50px; /* Start outside the container */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.3); /* Faint background icon */
+    z-index: 0; /* Send behind the text */
+    animation: slideIn 1s ease forwards; /* Slide animation */
+}
+
+@keyframes slideIn {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: -50px;
+        opacity: 1;
+    }
+}
