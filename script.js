@@ -38,3 +38,6 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         alert("Please fill out all fields before submitting.");
     }
 });
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
