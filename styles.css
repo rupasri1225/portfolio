@@ -712,10 +712,5 @@ img {
         opacity: 1;
     }
 }
-/* Dark mode text color */
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #ffffff; /* Set text color to white in dark mode */
-    }
-}
+
 
