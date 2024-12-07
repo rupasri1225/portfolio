@@ -524,5 +524,49 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
 } 
 /* Hover effect for call-to-action buttons */ 
 .project-item .cta-btn:hover { 
-    background-color: #9370DB; /* Medium purple */
+    background-color: #9370DB; /* Medium .container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next line for smaller screens */
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1 1 300px; /* Responsive width for cards */
+  margin: 10px;
+}
+purple */
 } 
+@media (max-width: 480px) {
+  .header, .about, .projects, .contact {
+    padding: 10px;
+    text-align: center; /* Align content for smaller screens */
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu for small screens */
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
