@@ -41,3 +41,18 @@ document.getElementById("contactForm").addEventListener("submit", function (even
 document.querySelector('.menu-toggle').addEventListener('click', function () {
   document.querySelector('.nav-links').classList.toggle('show');
 });
+  function showSection(sectionId) {
+    // Hide all sections first
+    document.querySelectorAll('.section-content').forEach(section => {
+      section.classList.remove('animate');
+      section.style.opacity = 0;
+    });
+
+    // Show the selected section with animation
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.classList.add('animate');
+      section.style.opacity = 1;
+    }
+  }
+
