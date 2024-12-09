@@ -53,24 +53,74 @@
 </section>
         
         <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>
-                    I am Yarramsetti Rupa Sri, a third-year B.Tech student with a deep passion for Full Stack Web Development. My journey began with a curiosity for how websites work, and over time, it evolved into a dedicated pursuit of building efficient and innovative web solutions. I enjoy crafting applications that are visually appealing, highly functional, and user-focused.
-                </p>
-                <p>
-                    My expertise spans both front-end and back-end development. I work with technologies like HTML, CSS, JavaScript, Node.js, and MySQL to create responsive interfaces and scalable backend systems. I continuously explore new tools and frameworks to stay updated with the latest industry trends and deliver cutting-edge solutions.
-                </p>
-                <p>
-                    I value collaboration and have honed my teamwork and leadership skills through academic projects and internships. These experiences have taught me the importance of clear communication, task management, and adaptability in achieving shared goals. 
-                </p>
-                <p>
-                    Beyond coding, I am passionate about using technology to address real-world challenges and create meaningful impact. Whether it’s designing accessible websites or building innovative applications, I strive to deliver solutions that truly make a difference.
-                </p>
-            </div>
-        </section> 
-       
-        <section id="skills">
+    <div class="container">
+        <h2 class="fade-in">About Me</h2>
+        <p class="fade-in delay-1">
+            I am Yarramsetti Rupa Sri, a third-year B.Tech student with a deep passion for Full Stack Web Development. My journey began with a curiosity for how websites work, and over time, it evolved into a dedicated pursuit of building efficient and innovative web solutions. I enjoy crafting applications that are visually appealing, highly functional, and user-focused.
+        </p>
+        <p class="fade-in delay-2">
+            My expertise spans both front-end and back-end development. I work with technologies like HTML, CSS, JavaScript, Node.js, and MySQL to create responsive interfaces and scalable backend systems. I continuously explore new tools and frameworks to stay updated with the latest industry trends and deliver cutting-edge solutions.
+        </p>
+        <p class="fade-in delay-3">
+            I value collaboration and have honed my teamwork and leadership skills through academic projects and internships. These experiences have taught me the importance of clear communication, task management, and adaptability in achieving shared goals. 
+        </p>
+        <p class="fade-in delay-4">
+            Beyond coding, I am passionate about using technology to address real-world challenges and create meaningful impact. Whether it’s designing accessible websites or building innovative applications, I strive to deliver solutions that truly make a difference.
+        </p>
+    </div>
+</section>
+
+<style>
+    /* Container Style */
+    #about .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+    }
+
+    /* Delays for Sequential Animations */
+    .fade-in.delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .fade-in.delay-2 {
+        animation-delay: 0.4s;
+    }
+
+    .fade-in.delay-3 {
+        animation-delay: 0.6s;
+    }
+
+    .fade-in.delay-4 {
+        animation-delay: 0.8s;
+    }
+
+    /* Section Title Animation */
+    h2 {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 0.1s;
+        font-size: 2em;
+        text-align: center;
+    }
+</style>
             <!-- Skills -->
             <section id="skills">
                 <div class="container">
