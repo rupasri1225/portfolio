@@ -3,13 +3,9 @@
     font-family: 'Poppins', sans-serif; 
     margin: 0; padding: 0; 
     background-color: rgb(249, 242, 250); 
-    color: #333; 
     transition: background-color 0.3s ease, color 0.3s ease;
 } 
-.container{ 
-    margin: 0 auto; 
-    padding: 20px; 
-} img { 
+ img { 
     width: 250px; 
     height: 250px; 
     border-radius: 50%; 
@@ -17,11 +13,6 @@
     margin: 0 auto; 
     box-shadow: 10px 10px 30px #4a148c; 
 } 
-a { 
-    text-decoration: none; 
-    color: inherit; 
-    transition: color 0.3s ease; 
-}
  a:hover { 
     color: #4a148c; 
 } 
@@ -32,7 +23,6 @@ h1, h2, h3 {
 /* Light Mode (Default) */ 
 body.light-mode { 
     background-color: white; 
-    color: #333; 
 } 
 /* Sidebar Styling */ 
 .sidebar { 
@@ -135,14 +125,8 @@ h1.logo {
     margin-bottom: 20px; 
 } 
 .cta-btn { 
-    display: inline-block; 
-    padding: 12px 24px; 
-    background-color: #4a148c; 
-    color: #ffffff; 
-    border-radius: 3px; 
     text-transform: uppercase; 
     font-weight: 600; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
 } 
 .cta-btn:hover { 
     background-color: #f8f2f2; 
@@ -255,7 +239,6 @@ form button:hover {
     max-width: 600px; 
     margin: 0 auto; 
     padding: 20px; 
-    text-align: center; 
 } 
 h2 {
     font-size: 2em; 
@@ -403,13 +386,9 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
 
 .certification-item {
     background-color: #d6a7f7; /* Light Purple Background */
-    color: #3c2b59; /* Dark Text */
-    font-size: 16px;
-    font-weight: bold;
     border-radius: 12px; /* Rounded corners */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden; /* For animations to stay within bounds */
@@ -420,23 +399,6 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     background-color: #a76af7; /* Darker Purple on Hover */
 }
-
-.certification-item h4 {
-    margin-bottom: 15px;
-}
-
-.cta-btn {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #5a0b9a; /* Button Background */
-    color: #fff; /* Button Text */
-    border-radius: 8px; /* Rounded button */
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
 .cta-btn:hover {
     background-color: #3c2b59; /* Darker button color on hover */
 }
@@ -480,16 +442,7 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
     max-width: 100%; /* Ensure images are responsive */
     height: auto; 
     border-radius: 8px; /* Add rounded corners */ 
-} 
-.cta-btn { 
-    display: inline-block; 
-    margin-top: 10px; 
-    padding: 8px 12px; 
-    background-color: #7305e8; 
-    color: white; 
-    text-decoration: none; 
-    border-radius: 5px; 
-} 
+}  
 .cta-btn:hover { 
     background-color: #0c0cfc; /* Slightly darker on hover */
 } 
@@ -652,9 +605,6 @@ img {
 
 .certification-item {
     background-color: #d6a7f7; /* Light Purple Background */
-    color: #3c2b59; /* Dark Text */
-    font-size: 16px;
-    font-weight: bold;
     border-radius: 12px; /* Rounded corners */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -673,19 +623,6 @@ img {
 .certification-item h4 {
     margin-bottom: 15px;
 }
-
-.cta-btn {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #5a0b9a; /* Button Background */
-    color: #fff; /* Button Text */
-    border-radius: 8px; /* Rounded button */
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
 .cta-btn:hover {
     background-color: #3c2b59; /* Darker button color on hover */
 }
@@ -748,14 +685,6 @@ img {
 /* Styling for the CTA button */
 .cta-btn {
     animation: fadeIn 1.5s ease-in-out;
-    padding: 10px 20px;
-    background-color: #4a148c; /* Deep Purple */
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    display: inline-block;
-    transition: background-color 0.3s;
 }
 
 .cta-btn:hover {
