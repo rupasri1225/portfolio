@@ -619,19 +619,6 @@ img {
 .cta-btn:hover {
     background-color: #3c2b59; /* Darker button color on hover */
 }
-
-.certification-item::before {
-    content: "🎓"; /* Icon */
-    font-size: 40px;
-    position: absolute;
-    top: -50px; /* Start outside the container */
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.3); /* Faint background icon */
-    z-index: 0; /* Send behind the text */
-    animation: slideIn 1s ease forwards; /* Slide animation */
-}
-
 @keyframes slideIn {
     from {
         top: -100px;
