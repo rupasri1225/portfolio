@@ -426,7 +426,7 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
 }
 
 .cta-btn {
-    display: outline-block;
+    display: block;
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #5a0b9a; /* Button Background */
