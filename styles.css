@@ -426,7 +426,7 @@ body.dark-mode .project-item h4, body.dark-mode .project-item p {
 }
 
 .cta-btn {
-    display: inline-block;
+    display: outline-block;
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #5a0b9a; /* Button Background */
@@ -618,7 +618,7 @@ img {
     /* Darker Purple on Hover */
  } 
  .certifications .cta-btn { 
-    display: block; 
+    display: outline-block; 
     margin-top: 10px; 
     padding: 8px 15px; 
     background-color: #5a0b9a; 
