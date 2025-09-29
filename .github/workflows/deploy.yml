@@ -13,13 +13,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # uploads your index.html, css, js directly
+          path: .   # uploads everything (index.html, css, js, etc.)
 
       - name: Deploy to GitHub Pages
         id: deployment
